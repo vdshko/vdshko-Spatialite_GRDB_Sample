@@ -1,6 +1,0 @@
-framework module Pods_Spatialite_GRDB_Sample {
-  umbrella header "Pods-Spatialite_GRDB_Sample-umbrella.h"
-
-  export *
-  module * { export * }
-}
