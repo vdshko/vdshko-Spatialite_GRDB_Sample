@@ -1,0 +1,104 @@
+platform :ios, '15.0'
+use_frameworks!
+
+def databases
+  # SQLite databases; https://github.com/groue/GRDB.swift
+  pod 'GRDB.swift/SQLCipher', git: 'https://github.com/groue/GRDB.swift.git', branch: 'GRDB6', :inhibit_warnings => true
+
+  # Encryption of database files; https://github.com/sqlcipher/sqlcipher
+  pod 'SQLCipher', '~> 4.0', :inhibit_warnings => true
+end
+
+target 'Spatialite_GRDB_Sample' do
+  databases
+end
+
+# Inegreting Spatialite on the C level deep inside the GRDB and SQLCipher libs to make them work together.
+
+post_install do |installer|
+  # Modify pods targets settings
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+    end
+    if target.name == 'SQLCipher'
+      # Link libraries
+      target.build_configurations.each do |config|
+        config.build_settings['OTHER_LDFLAGS'] ||= ''
+        config.build_settings['OTHER_LDFLAGS'] << ' -lc++ -lz -liconv'
+      end
+      # Find the "Link Binary with Libraries" build phase and add the Spatialite xcframework
+      target.frameworks_build_phases.add_file_reference(
+        installer.pods_project.new_file('../libspatialite.xcframework')
+      )
+    end
+  end
+
+  file_path = "#{installer.sandbox.pod_dir('SQLCipher')}/sqlite3.c"
+
+  # Check if the file exists
+  if File.exist?(file_path)
+    # Read the file
+    text = File.read(file_path)
+
+    # Check if the line '#include <spatialite.h>' already exists
+    unless text.include?('#include <spatialite.h>')
+      # Search for the line "static int openDatabase(" and replace it with the required block of code
+      new_text = text.gsub('static int openDatabase(', <<~HEREDOC
+        #include <spatialite/gaiageo.h>
+        #include <spatialite.h>
+
+        static int openDatabaseInternal(
+          const char *zFilename, /* Database filename UTF-8 encoded */
+          sqlite3 **ppDb,        /* OUT: Returned database handle */
+          unsigned int flags,    /* Operational flags */
+          const char *zVfs       /* Name of the VFS to use */
+        );
+
+        // Block with the static "is_spatialite_initialized" property is used to initialize
+        // the Spatialite once for the whole session.
+        // To use thread-safe initialization:
+        // 1. Comment this static property and block in the "openDatabase" function.
+        // 2. Uncomment lines with "cache" and "spatialite_init_ex"
+        // (beware "spatialite_init_ex" - can contain only 64 connections simultaneously)
+        static bool is_spatialite_initialized = false;
+
+        static int openDatabase(
+          const char *zFilename, /* Database filename UTF-8 encoded */
+          sqlite3 **ppDb,        /* OUT: Returned database handle */
+          unsigned int flags,    /* Operational flags */
+          const char *zVfs       /* Name of the VFS to use */
+        ){
+          int rc;
+
+          if (!is_spatialite_initialized) {
+            is_spatialite_initialized = true;
+            spatialite_init(0);
+          }
+
+          rc = openDatabaseInternal(zFilename, ppDb, (unsigned int)flags, zVfs);
+          //  void *cache;
+          //  cache = spatialite_alloc_connection();
+          //  spatialite_init_ex(*ppDb, cache, 0);
+          return rc;
+        }
+
+        static int openDatabaseInternal(
+      HEREDOC
+      )
+      
+      # Unlocks the file to make it possible to change it
+      system("chmod +w #{file_path}")
+      
+      # Write the modified content back to the file
+      File.open(file_path, "w") { |file| file.puts new_text }
+      puts "SpatiaLite integrated"
+    else
+      puts "SpatiaLite integrated"
+    end
+
+  else
+    # If file doesn't exist, print a message to the console
+    puts "File not found: #{file_path}"
+  end
+end

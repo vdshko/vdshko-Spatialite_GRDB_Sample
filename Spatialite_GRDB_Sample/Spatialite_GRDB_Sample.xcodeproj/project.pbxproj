@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B8F42B22D42F48500155B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F42A82D42F48500155B20 /* AppDelegate.swift */; };
+		2B8F42B32D42F48500155B20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F42AF2D42F48500155B20 /* SceneDelegate.swift */; };
+		2B8F42B42D42F48500155B20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F42B02D42F48500155B20 /* ViewController.swift */; };
+		2B8F42B52D42F48500155B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8F42A92D42F48500155B20 /* Assets.xcassets */; };
+		2B8F42B72D42F48500155B20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8F42AC2D42F48500155B20 /* LaunchScreen.storyboard */; };
+		2B8F42BA2D42F7FA00155B20 /* GRDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F42B92D42F7FA00155B20 /* GRDBManager.swift */; };
+		2B8F42BC2D42F8BD00155B20 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F42BB2D42F8BD00155B20 /* DBManager.swift */; };
+		2B8F42BE2D42FA3100155B20 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F42BD2D42FA2800155B20 /* UIApplicationExtensions.swift */; };
+		629571CFB2AF334B7574749F /* Pods_Spatialite_GRDB_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D294FE2F8FCF0F68327BFC98 /* Pods_Spatialite_GRDB_Sample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02D428ED51C414603DD83D10 /* Pods-Spatialite_GRDB_Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spatialite_GRDB_Sample.debug.xcconfig"; path = "Target Support Files/Pods-Spatialite_GRDB_Sample/Pods-Spatialite_GRDB_Sample.debug.xcconfig"; sourceTree = "<group>"; };
+		2B8F42902D42F21600155B20 /* Spatialite_GRDB_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spatialite_GRDB_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B8F42A82D42F48500155B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2B8F42A92D42F48500155B20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B8F42AA2D42F48500155B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B8F42AB2D42F48500155B20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B8F42AF2D42F48500155B20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2B8F42B02D42F48500155B20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B8F42B92D42F7FA00155B20 /* GRDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRDBManager.swift; sourceTree = "<group>"; };
+		2B8F42BB2D42F8BD00155B20 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		2B8F42BD2D42FA2800155B20 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
+		B032851C14214DB3284989F7 /* Pods-Spatialite_GRDB_Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spatialite_GRDB_Sample.release.xcconfig"; path = "Target Support Files/Pods-Spatialite_GRDB_Sample/Pods-Spatialite_GRDB_Sample.release.xcconfig"; sourceTree = "<group>"; };
+		D294FE2F8FCF0F68327BFC98 /* Pods_Spatialite_GRDB_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spatialite_GRDB_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B8F428D2D42F21600155B20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				629571CFB2AF334B7574749F /* Pods_Spatialite_GRDB_Sample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B8F42872D42F21600155B20 = {
+			isa = PBXGroup;
+			children = (
+				2B8F42B12D42F48500155B20 /* Spatialite_GRDB_Sample */,
+				2B8F42912D42F21600155B20 /* Products */,
+				463197CB473A461153A68ACA /* Pods */,
+				B993AD01A8A93E63070D10B9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2B8F42912D42F21600155B20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B8F42902D42F21600155B20 /* Spatialite_GRDB_Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B8F42B12D42F48500155B20 /* Spatialite_GRDB_Sample */ = {
+			isa = PBXGroup;
+			children = (
+				2B8F42A82D42F48500155B20 /* AppDelegate.swift */,
+				2B8F42A92D42F48500155B20 /* Assets.xcassets */,
+				2B8F42BB2D42F8BD00155B20 /* DBManager.swift */,
+				2B8F42B92D42F7FA00155B20 /* GRDBManager.swift */,
+				2B8F42AA2D42F48500155B20 /* Info.plist */,
+				2B8F42AC2D42F48500155B20 /* LaunchScreen.storyboard */,
+				2B8F42AF2D42F48500155B20 /* SceneDelegate.swift */,
+				2B8F42BD2D42FA2800155B20 /* UIApplicationExtensions.swift */,
+				2B8F42B02D42F48500155B20 /* ViewController.swift */,
+			);
+			path = Spatialite_GRDB_Sample;
+			sourceTree = "<group>";
+		};
+		463197CB473A461153A68ACA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02D428ED51C414603DD83D10 /* Pods-Spatialite_GRDB_Sample.debug.xcconfig */,
+				B032851C14214DB3284989F7 /* Pods-Spatialite_GRDB_Sample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B993AD01A8A93E63070D10B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D294FE2F8FCF0F68327BFC98 /* Pods_Spatialite_GRDB_Sample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B8F428F2D42F21600155B20 /* Spatialite_GRDB_Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B8F42A32D42F21700155B20 /* Build configuration list for PBXNativeTarget "Spatialite_GRDB_Sample" */;
+			buildPhases = (
+				D19430155AB199AB8708466E /* [CP] Check Pods Manifest.lock */,
+				2B8F428C2D42F21600155B20 /* Sources */,
+				2B8F428D2D42F21600155B20 /* Frameworks */,
+				2B8F428E2D42F21600155B20 /* Resources */,
+				2B27E473325594B32947A1D8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spatialite_GRDB_Sample;
+			productName = Spatialite_GRDB_Sample;
+			productReference = 2B8F42902D42F21600155B20 /* Spatialite_GRDB_Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B8F42882D42F21600155B20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					2B8F428F2D42F21600155B20 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 2B8F428B2D42F21600155B20 /* Build configuration list for PBXProject "Spatialite_GRDB_Sample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B8F42872D42F21600155B20;
+			productRefGroup = 2B8F42912D42F21600155B20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B8F428F2D42F21600155B20 /* Spatialite_GRDB_Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B8F428E2D42F21600155B20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8F42B52D42F48500155B20 /* Assets.xcassets in Resources */,
+				2B8F42B72D42F48500155B20 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B27E473325594B32947A1D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spatialite_GRDB_Sample/Pods-Spatialite_GRDB_Sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Spatialite_GRDB_Sample/Pods-Spatialite_GRDB_Sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Spatialite_GRDB_Sample/Pods-Spatialite_GRDB_Sample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D19430155AB199AB8708466E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Spatialite_GRDB_Sample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B8F428C2D42F21600155B20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B8F42BE2D42FA3100155B20 /* UIApplicationExtensions.swift in Sources */,
+				2B8F42BC2D42F8BD00155B20 /* DBManager.swift in Sources */,
+				2B8F42B22D42F48500155B20 /* AppDelegate.swift in Sources */,
+				2B8F42B32D42F48500155B20 /* SceneDelegate.swift in Sources */,
+				2B8F42BA2D42F7FA00155B20 /* GRDBManager.swift in Sources */,
+				2B8F42B42D42F48500155B20 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2B8F42AC2D42F48500155B20 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B8F42AB2D42F48500155B20 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B8F42A42D42F21700155B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02D428ED51C414603DD83D10 /* Pods-Spatialite_GRDB_Sample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4X4Z9SSNGG;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Spatialite_GRDB_Sample/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vdshko.projects.Spatialite-GRDB-Sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B8F42A52D42F21700155B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B032851C14214DB3284989F7 /* Pods-Spatialite_GRDB_Sample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4X4Z9SSNGG;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Spatialite_GRDB_Sample/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vdshko.projects.Spatialite-GRDB-Sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2B8F42A62D42F21700155B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2B8F42A72D42F21700155B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B8F428B2D42F21600155B20 /* Build configuration list for PBXProject "Spatialite_GRDB_Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8F42A62D42F21700155B20 /* Debug */,
+				2B8F42A72D42F21700155B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B8F42A32D42F21700155B20 /* Build configuration list for PBXNativeTarget "Spatialite_GRDB_Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B8F42A42D42F21700155B20 /* Debug */,
+				2B8F42A52D42F21700155B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B8F42882D42F21600155B20 /* Project object */;
+}
