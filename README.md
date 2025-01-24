@@ -1,7 +1,8 @@
 # Spatialite + GRDB + SQLCipher Sample
 This sample shows how to integrate Spatialite, GRDB, and SQLCipher into your Swift project. It's nearly empty, however, it's fully playable.
 
-The repository has an empty Test.db file to play with. (Please make sure to share it with your iPhone or iPad Files before running a build).
+The repository has an empty "Test.db" file to play with. (Please make sure to share it with your iPhone or iPad Files before running a build).
+On the build run the app will ask you to choose the db file from your device.
 
 My article with instructions for building this on your own from scratch is here:
 https://medium.com/@vladislavshkodich/spatialite-with-ios-5fd55641fe3b
