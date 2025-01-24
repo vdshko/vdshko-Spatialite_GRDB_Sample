@@ -1,9 +1,8 @@
 //
 //  DBManager.swift
-//  Odysseus
+//  Spatialite_GRDB_Sample
 //
-//  Created by Vladyslav Shkodych on 11.10.2024.
-//  Copyright © 2024 Eurospektras. All rights reserved.
+//  Created by Vladyslav Shkodych on 23.01.2025.
 //
 
 protocol DBManager: AnyObject {
